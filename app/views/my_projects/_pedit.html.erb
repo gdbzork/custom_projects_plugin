@@ -1,0 +1,12 @@
+<ul>
+<% @psets[@pstack[-1]].each do |p| %>
+  <li><%= check_box_tag(p,value=@current.include?(p),checked=@current.include?(p)) %>
+      <%= label_tag(p,@projects[p].name) %>
+  </li>
+  <% if @psets.has_key? p %>
+    <% @pstack.append(p) %>
+    <%= render :partial => 'pedit' %>
+    <% @pstack.pop %>
+  <% end %>
+<% end %>
+</ul>

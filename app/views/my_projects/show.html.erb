@@ -1,0 +1,6 @@
+<h3><%= @user.firstname %><%= l(:my_projects_heading) %></h3>
+
+<% @pstack = [nil] %>
+<%= render :partial => 'plist' %>
+<hr>
+<a href="/my_projects/edit"><%= l(:my_projects_edit) %></a>

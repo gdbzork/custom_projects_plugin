@@ -1,0 +1,10 @@
+<ul>
+<% @psets[@pstack[-1]].each do |p| %>
+  <li><a href="<%= project_url(p) %>"><%= @projects[p].name %></a></li>
+  <% if @psets.has_key? p %>
+    <% @pstack.append(p) %>
+    <%= render :partial => 'plist' %>
+    <% @pstack.pop %>
+  <% end %>
+<% end %>
+</ul>

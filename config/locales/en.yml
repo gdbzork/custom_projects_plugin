@@ -1,0 +1,6 @@
+# English strings go here for Rails i18n
+en:
+  my_projects_caption: "MyProjects"
+  my_projects_heading: "'s Favourite Projects"
+  my_projects_edit: "Edit"
+  my_projects_save: "Save"

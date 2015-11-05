@@ -1,0 +1,9 @@
+<h3><%= @user.firstname %><%= l(:my_projects_heading) %></h3>
+
+<p>Choose the projects you want to see on your short list:
+<%= form_tag('/my_projects', method: 'patch') do %>
+<% @pstack = [nil] %>
+<%= render :partial => 'pedit' %>
+<hr>
+<p><%= submit_tag(l(:my_projects_save)) %></p>
+<% end %>
